@@ -25,7 +25,7 @@ title: 3rd party model
 flowchart LR;
    issuer-->holder;
    holder-->verifier;
-   issuer & holder & -->registry;
+   issuer & holder & verifier -->registry;
 ```
 
 
