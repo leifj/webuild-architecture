@@ -23,9 +23,13 @@ This note describes a general model for distributed trust architecture for namme
 title: 3rd party model
 ---
 flowchart LR;
+   subgraph credentials
    issuer-->holder;
    holder-->verifier;
+   end
+   subgraph trust
    issuer & holder & verifier -->registry;
+   end
 ```
 
 
