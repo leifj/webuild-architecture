@@ -20,11 +20,11 @@ This note describes a general model for distributed trust architecture for namme
 
 ```mermaid
 graph TD;
-   issuer->holder;
-   holder->verifier;
-   issuer->registry;
-   holder->registry;
-   verifier->registry;
+   issuer-->holder;
+   holder-->verifier;
+   issuer-->registry;
+   holder-->registry;
+   verifier-->registry;
 ```
 
 
