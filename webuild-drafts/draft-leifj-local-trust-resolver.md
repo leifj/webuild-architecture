@@ -19,8 +19,6 @@ This note describes a general model for distributed trust architecture for namme
 ## Trust resolution
 
 ```mermaid
-title: 3 party model
-displayMode: compact
 flowchart LR;
    issuer-->holder;
    holder-->verifier;
