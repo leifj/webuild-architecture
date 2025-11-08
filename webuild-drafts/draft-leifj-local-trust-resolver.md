@@ -18,6 +18,8 @@ This note describes a general model for distributed trust architecture for namme
 
 ## Trust resolution
 
+In the third party model is often described as a series of flows between 4 different actors: issuers, verifiers, holders each connected to a common trust registry. 
+
 ```mermaid
 ---
 title: 3rd party model
@@ -28,8 +30,10 @@ flowchart LR;
    holder-->verifier;
    end
    subgraph trust
-   issuer & holder & verifier -->registry;
+   credentials --> registry;
    end
 ```
 
+Issuers issue credentials that are bound to the issuer and to the holder by digital signatures. Verifiers verify both the holder and issuer binding and holders verify the authenticity of both the verifier and issuer. 
 
+A trust registry 
