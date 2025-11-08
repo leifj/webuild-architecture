@@ -49,7 +49,7 @@ flowchart LR;
    issuer-->holder;
    holder-->verifier;
    end
-   subgraph TR@{label: "Trust Registry"}
+   subgraph trust
    lookup <--> registry
    end
    issuer & holder & verifier <-- registry
