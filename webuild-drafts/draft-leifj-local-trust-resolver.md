@@ -45,13 +45,13 @@ It is possible to
 title: 3rd party model
 ---
 flowchart LR
+   issuer & holder & verifier<--registry
+   issuer & holder & verifier-->lookup
    subgraph credentials
-   issuer --> holder
-   holder --> verifier
+   issuer-->holder
+   holder-->verifier
    end
    subgraph trust
-   lookup <--> registry
+   lookup<-->registry
    end
-   issuer & holder & verifier <-- registry
-   issuer & holder & verifier --> lookup
 ```
