@@ -50,7 +50,7 @@ flowchart LR;
    holder-->verifier;
    end
    subgraph "trust registry"
-   registry lookup <--> registry
+   "registry lookup" <--> registry
    end
    issuer & holder & verifier <-- registry
    issuer --> "registry lookup"
