@@ -29,7 +29,7 @@ flowchart LR;
    issuer-->holder;
    holder-->verifier;
    end
-   credentials --> registry;
+   credentials <--> registry;
 ```
 
 Issuers issue credentials that are bound to the issuer and to the holder by digital signatures. Verifiers verify both the holder and issuer binding and holders verify the authenticity of both the verifier and issuer. 
