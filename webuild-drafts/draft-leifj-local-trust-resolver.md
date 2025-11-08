@@ -50,8 +50,8 @@ flowchart LR;
    holder-->verifier;
    end
    subgraph trust
-   lookup <--> registry
+   lookup <--> registry;
    end
-   issuer & holder & verifier <-- registry
-   issuer holder & verifier --> lookup
+   issuer & holder & verifier <-- registry;
+   issuer holder & verifier --> lookup;
 ```
