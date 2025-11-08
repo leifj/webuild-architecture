@@ -53,7 +53,5 @@ flowchart LR;
    lookup <--> registry
    end
    issuer & holder & verifier <-- registry
-   issuer --> lookup
-   verifier --> lookup
-   holder --> lookup
+   issuer holder & verifier --> lookup
 ```
