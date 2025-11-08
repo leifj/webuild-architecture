@@ -49,11 +49,11 @@ flowchart LR;
    issuer-->holder;
    holder-->verifier;
    end
-   subgraph "trust registry"
-   "registry lookup" <--> registry
+   subgraph TR@{label: "Trust Registry"}
+   lookup <--> registry
    end
    issuer & holder & verifier <-- registry
-   issuer --> "registry lookup"
-   verifier --> "registry lookup"
-   holder --> "registry lookup"
+   issuer --> lookup
+   verifier --> lookup
+   holder --> lookup
 ```
