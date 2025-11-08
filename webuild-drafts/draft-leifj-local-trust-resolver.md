@@ -44,14 +44,17 @@ It is possible to
 ---
 title: 3rd party model
 ---
-flowchart LR
+flowchart TD
    issuer & holder & verifier<--registry
    issuer & holder & verifier-->lookup
    subgraph credentials
+   direction LR
    issuer-->holder
    holder-->verifier
    end
    subgraph trust
+   direction LR
    lookup<-->registry
    end
+   
 ```
