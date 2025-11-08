@@ -34,4 +34,26 @@ flowchart LR;
 
 Issuers issue credentials that are bound to the issuer and to the holder by digital signatures. Verifiers verify both the holder and issuer binding and holders verify the authenticity of both the verifier and issuer. 
 
-A trust registry 
+A trust registry is a mechanism for registering and verifying name-to-key mapping. Often metadata is also associated with the public key so name-to-key mapping is actually often name-to-key-mapping with authenticated metadata. Creating entries in a trust registry is often very dependent on the type of trust registry beeing used - for instance when using classical X.509 PKI registration amounts to requesting an X.509 certificate with the right fields (this is the metadata in this case) from the appropriate CA. Other types of registries employ various APIs and processes to achive the same effect by other means. 
+
+The fact that all trust registries can be described as an authenticated name-to-key mapping doesn't mean that all trust registries are equivalent. Far from it, different trust registries have different semantic for registration and syntax for keys and naming.
+
+It is possible to 
+
+```mermaid
+---
+title: 3rd party model
+---
+flowchart LR;
+   subgraph credentials
+   issuer-->holder;
+   holder-->verifier;
+   end
+   subgraph "trust registry"
+   registry lookup <--> registry
+   end
+   issuer & holder & verifier <-- registry
+   issuer --> "registry lookup"
+   verifier --> "registry lookup"
+   holder --> "registry lookup"
+```
